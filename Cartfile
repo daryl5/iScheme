@@ -1,0 +1,5 @@
+github "shpakovski/MASPreferences"
+github "sparkle-project/Sparkle"
+github "Clipy/KeyHolder"
+github "Clipy/Magnet"
+github "robbiehanson/CocoaAsyncSocket" "master"

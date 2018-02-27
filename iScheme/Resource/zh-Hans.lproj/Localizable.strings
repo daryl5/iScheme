@@ -1,0 +1,116 @@
+/* 
+  Localizable.strings
+  iScheme
+
+  Created by lingwan on 2016/12/29.
+  Copyright © 2016年 lingwan. All rights reserved.
+*/
+
+//主界面
+QUICK_JUMP      = "快速跳转...";
+
+DEVICES         = "设备";
+
+BONJOUR_SERVER  = " 启动Server";
+
+STOP_BONJOUR_SERVER = " 停止Server";
+
+TOOLBOX         = "工具箱";
+
+PREFERENCES     = "设置";
+
+EDIT            = "编辑";
+
+QUIT            = "退出";
+
+//工具箱
+OPEN_SANDBOX    = "打开应用沙盒";
+
+SCAN_SCREEN_QR  = "扫描屏幕二维码";
+
+//编辑
+EDIT_TITLE      = "标题";
+
+EDIT_SCHEME     = "Scheme";
+
+UNTITLED        = "未命名";
+
+EDIT_ADD        = "添加";
+
+EDIT_DELETE     = "删除";
+
+EDIT_COPY       = "复制";
+
+EDIT_EDIT       = "编辑";
+
+EDIT_STICK      = "置顶";
+
+//设置
+SANDBOX_PROMPT  = "请输入沙盒目录关键词";
+
+ADB_PATH_PROMPT = "请输入ADB路径";
+
+GENERAL         = "通用";
+
+ADVANCED        = "高级";
+
+TIPS            = "Tips";
+
+TIPS-INDEX      = "index";
+
+ABOUT           = "关于";
+
+CONTACT_ME      = "联系我(邮箱)";
+
+EMAIL_COPIED    = "已复制";
+
+DONATE          = "请我喝咖啡";
+
+DONATE_URL      = "http://schememanager-store.oss-cn-shanghai.aliyuncs.com/donate_page/donate.html";
+
+//打开沙盒
+NO_DEVICE_ERROR = "没有已启动的模拟器";
+
+NO_SANDBOX_ERROR= "没有发现应用目录，请尝试重新设置沙盒目录关键词";
+
+FOUND_SANDBOX   = "发现";
+
+SANDBOX_NUM     = "个应用沙盒目录";
+
+//屏幕二维码扫描
+SCREEN_QR_JUMP  = "跳转";
+
+SCREEN_QR_COPY  = "复制";
+
+SCREEN_QR_NO    = "没有在屏幕上找到二维码";
+
+//数据管理
+INIT_SCHEME     = "在 safari 中打开 Google";
+WRITE_FILE_ERROR= "写入 Documents/Schemes.json 发生错误";
+
+//快速跳转
+QUICK_JUMP_TIP      = "请输入跳转链接或搜索关键词 (⌘⏎ 生成二维码)";
+SEARCH_RESULT_QR    = "二维码";
+SEARCH_RESULT_COPY  = "复制";
+SEARCH_RESULT_EDIT  = "编辑";
+SEARCH_RESULT_STICK = "置顶";
+
+//Bigbang
+BIGBANG_DELETE  = "删除(⌘ D)";
+BIGBANG_SAVE    = "保存(⌘ S)";
+BIGBANG_JUMP    = "跳转(⌘ G)";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Tips</title>
+	<meta name="description" content=""> 
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script type="text/javascript">
+	    $(document).ready(function() {
+	        $('#fullPage').fullpage({
+	            sectionsColor: ['#ebebeb', '#ebebeb', '#ebebeb'],
+	            navigation: true,
+	            navigationPosition: 'right',
+	        });
+	    });
+	</script>
+</head>
+<body>
+	<div id="fullPage">
+	    <div class="section">
+		    <div class="tip-container">
+		    	<div class="tip-section">
+		    		<div>
+		    			<h4>快速生成二维码</h4>
+		    			<hr class="title-bottom-hr"/>
+	    			</div>
+		    	</div>
+                <div class="row tip-section col-sm interactive-row">
+                    <img src="images/quick-qr-ch@2x.png" class="img-responsive tips-image" width="75%" />
+                    <div class="tip-desc">按住 ⌘ 点击菜单项，可以快速生成二维码 (或者按下 ⌘+n 后，稍候再松开 ⌘ 键)</div>
+                </div>
+		    </div>
+	    </div>
+	    <div class="section">
+	        <div class="tip-container">
+		    	<div class="tip-section">
+		    		<div>
+		    			<h4>置顶</h4>
+		    			<hr class="title-bottom-hr"/>
+		    		</div>
+		    	</div>
+                <div class="row tip-section col-sm interactive-row">
+                    <img src="images/stick-ch@2x.png" class="img-responsive tips-image" width="88%" />
+                    <div class="tip-desc">将正在调试页面的 scheme 置顶，然后使用全局快捷键直接跳转，快了又快!</div>
+                </div>
+		    </div>
+	    </div>
+	    <div class="section">
+	        <div class="tip-container">
+		    	<div class="tip-section">
+		    		<div>
+		    			<h4>编辑二维码内容</h4>
+		    			<hr class="title-bottom-hr"/>
+		    		</div>
+		    	</div>
+                <div class="row tip-section col-sm interactive-row">
+                    <img src="images/edit-qr-ch@2x.png" class="img-responsive tips-image" width="80%" />
+                    <div class="tip-desc">扫描屏幕二维码后，按住 ⌘ 点击跳转，会在「快速打开」窗口显示二维码内容，方便你编辑后再进行复制、跳转</div>
+                </div>
+		    </div>
+	    </div>
+	</div>
+</body>
+</html>

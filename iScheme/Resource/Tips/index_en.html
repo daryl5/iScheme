@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Tips</title>
+	<meta name="description" content=""> 
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script type="text/javascript">
+	    $(document).ready(function() {
+	        $('#fullPage').fullpage({
+	            sectionsColor: ['#ebebeb', '#ebebeb', '#ebebeb'],
+	            navigation: true,
+	            navigationPosition: 'right',
+	        });
+	    });
+	</script>
+</head>
+<body>
+	<div id="fullPage">
+	    <div class="section">
+		    <div class="tip-container">
+		    	<div class="tip-section">
+		    		<div>
+		    			<h4>Generate QR-code Directly</h4>
+		    			<hr class="title-bottom-hr"/>
+	    			</div>
+		    	</div>
+                <div class="row tip-section col-sm interactive-row">
+                    <img src="images/quick-qr-en@2x.png" class="img-responsive tips-image" width="75%" />
+                    <div class="tip-desc">Press and hold ⌘, then click scheme item you can get QR-code directly (or press ⌘ with item index, and hold ⌘ for a while)</div>
+                </div>
+		    </div>
+	    </div>
+	    <div class="section">
+	        <div class="tip-container">
+		    	<div class="tip-section">
+		    		<div>
+		    			<h4>Stick</h4>
+		    			<hr class="title-bottom-hr"/>
+		    		</div>
+		    	</div>
+                <div class="row tip-section col-sm interactive-row">
+                    <img src="images/stick-en@2x.png" class="img-responsive tips-image" width="88%" />
+                    <div class="tip-desc">Stick scheme of the page you are working on, then use hotkey to jump, faster than fast!</div>
+                </div>
+		    </div>
+	    </div>
+	    <div class="section">
+	        <div class="tip-container">
+		    	<div class="tip-section">
+		    		<div>
+		    			<h4>Edit QR-code Content</h4>
+		    			<hr class="title-bottom-hr"/>
+		    		</div>
+		    	</div>
+                <div class="row tip-section col-sm interactive-row">
+                    <img src="images/edit-qr-en@2x.png" class="img-responsive tips-image" width="80%" />
+                    <div class="tip-desc">After scan QR-code on screen, you can press ⌘ and click Jump to show QR-code content in「Quick Jump...」for editing before jump or copy</div>
+                </div>
+		    </div>
+	    </div>
+	</div>
+</body>
+</html>

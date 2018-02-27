@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AboutPrefController" customModule="iScheme" customModuleProvider="target">
+            <connections>
+                <outlet property="contactMe" destination="Dzt-Vp-LuI" id="BfM-19-bb8"/>
+                <outlet property="copyrightTextField" destination="tHn-7s-xTa" id="ekO-E3-V1Q"/>
+                <outlet property="donate" destination="aI4-Z8-1z7" id="hvc-IV-PQm"/>
+                <outlet property="nameTextField" destination="mfh-cB-iaH" id="7bK-TP-nYJ"/>
+                <outlet property="versionTextField" destination="VVw-uR-fmo" id="gc1-lB-J7G"/>
+                <outlet property="view" destination="c22-O7-iKe" id="X6F-f3-tqn"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="275"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="qOG-Px-VFl">
+                    <rect key="frame" x="198" y="158" width="84" height="84"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="P7o-b3-CjP"/>
+                </imageView>
+                <textField verticalHuggingPriority="750" misplaced="YES" id="VVw-uR-fmo">
+                    <rect key="frame" x="138" y="107" width="204" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Version" id="WJ5-rC-fdJ">
+                        <font key="font" size="11" name=".PingFangSC-Regular"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" misplaced="YES" textCompletion="NO" id="mfh-cB-iaH">
+                    <rect key="frame" x="138" y="126" width="204" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="Product Name" id="B1X-rS-29z">
+                        <font key="font" size="18" name=".PingFangSC-Regular"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" id="tHn-7s-xTa">
+                    <rect key="frame" x="88" y="18" width="304" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Copyright" id="FGG-ZV-pBv">
+                        <font key="font" size="11" name=".PingFangSC-Regular"/>
+                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button focusRingType="none" verticalHuggingPriority="750" misplaced="YES" id="aI4-Z8-1z7">
+                    <rect key="frame" x="241" y="68" width="99" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="请我喝咖啡" bezelStyle="rounded" alignment="center" borderStyle="border" focusRingType="none" inset="2" id="HrD-RI-XB5">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="donateClicked:" target="-2" id="cQg-IU-n6I"/>
+                    </connections>
+                </button>
+                <button focusRingType="none" verticalHuggingPriority="750" misplaced="YES" id="Dzt-Vp-LuI">
+                    <rect key="frame" x="134" y="68" width="106" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="联系我(邮箱)" bezelStyle="rounded" alignment="center" borderStyle="border" focusRingType="none" inset="2" id="TnB-ZN-NPb">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="contactMeClicked:" target="-2" id="1fO-8Q-tCG"/>
+                    </connections>
+                </button>
+            </subviews>
+        </customView>
+    </objects>
+    <resources>
+        <image name="AppIcon" width="128" height="128"/>
+    </resources>
+</document>

@@ -1,0 +1,111 @@
+/* 
+  Localizable.strings
+  iScheme
+
+  Created by lingwan on 2016/12/29.
+  Copyright © 2016年 lingwan. All rights reserved.
+*/
+
+//主界面
+QUICK_JUMP      = "Quick Jump...";
+
+DEVICES         = "Devices";
+
+BONJOUR_SERVER  = " Start Server";
+
+STOP_BONJOUR_SERVER = " Stop Server";
+
+TOOLBOX         = "Toolbox";
+
+PREFERENCES     = "Preferences";
+
+EDIT            = "Edit";
+
+QUIT            = "Quit";
+
+//工具箱
+OPEN_SANDBOX    = "Open Sandbox";
+
+SCAN_SCREEN_QR  = "Scan QR Code on Screen";
+
+//编辑
+EDIT_TITLE      = "Title";
+
+EDIT_SCHEME     = "Scheme";
+
+UNTITLED        = "Untitled";
+
+EDIT_ADD        = "Add";
+
+EDIT_DELETE     = "Delete";
+
+EDIT_COPY       = "Copy";
+
+EDIT_EDIT       = "Edit";
+
+EDIT_STICK      = "Stick";
+
+//设置
+SANDBOX_PROMPT  = "Please input sandbox keyword";
+
+ADB_PATH_PROMPT = "Please input ADB path";
+
+GENERAL         = "General";
+
+ADVANCED        = "Advanced";
+
+TIPS            = "Tips";
+
+TIPS-INDEX      = "index_en";
+
+ABOUT           = "About";
+
+CONTACT_ME      = "Contact";
+
+EMAIL_COPIED    = "Email copied";
+
+DONATE          = "Donate";
+
+DONATE_URL      = "http://schememanager-store.oss-cn-shanghai.aliyuncs.com/donate_page/donate_en.html";
+
+//打开沙盒
+NO_DEVICE_ERROR = "No devices are booted.";
+
+NO_SANDBOX_ERROR= "Sandbox not found. Please try changing another sandbox keyword.";
+
+FOUND_SANDBOX   = "Found";
+
+SANDBOX_NUM     = "sandbox directories";
+
+//屏幕二维码扫描
+SCREEN_QR_JUMP  = "Jump";
+
+SCREEN_QR_COPY  = "Copy";
+
+SCREEN_QR_NO    = "No QR code detected on screen";
+
+
+//数据管理
+INIT_SCHEME     = "Open Google in Safari";
+WRITE_FILE_ERROR= "Write Documents/Schemes.json error";
+
+//快速跳转
+QUICK_JUMP_TIP  = "Input scheme or search keyword here(⌘⏎ to get QR code)";
+SEARCH_RESULT_QR    = "QR-code";
+SEARCH_RESULT_COPY  = "Copy";
+SEARCH_RESULT_EDIT  = "Edit";
+SEARCH_RESULT_STICK = "Stick";
+
+//Bigbang
+BIGBANG_DELETE  = "Delete(⌘ D)";
+BIGBANG_SAVE    = "Save(⌘ S)";
+BIGBANG_JUMP    = "Jump(⌘ G)";
+
+
+
+
+
+
+
+
+

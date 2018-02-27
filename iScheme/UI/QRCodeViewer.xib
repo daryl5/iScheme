@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="QRCodeViewer" customModule="iScheme" customModuleProvider="target">
+            <connections>
+                <outlet property="qrImageView" destination="be4-Qc-lAy" id="12z-AD-hQB"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="二维码" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="264" height="264"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <value key="minSize" type="size" width="264" height="264"/>
+            <value key="maxSize" type="size" width="420" height="420"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="264" height="264"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="be4-Qc-lAy">
+                        <rect key="frame" x="9" y="9" width="246" height="246"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="be4-Qc-lAy" secondAttribute="height" id="Iq0-bz-XqJ"/>
+                        </constraints>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="grayBezel" id="XL9-lt-2VB"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="be4-Qc-lAy" secondAttribute="bottom" constant="12" id="FUi-JK-5bW"/>
+                    <constraint firstAttribute="trailing" secondItem="be4-Qc-lAy" secondAttribute="trailing" constant="12" id="gWR-wi-dDw"/>
+                    <constraint firstItem="be4-Qc-lAy" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="12" id="mqL-ga-EmB"/>
+                    <constraint firstItem="be4-Qc-lAy" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="12" id="psH-lA-rBK"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+        </window>
+    </objects>
+</document>

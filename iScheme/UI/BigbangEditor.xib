@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="BigbangEditor" customModule="iScheme" customModuleProvider="target">
+            <connections>
+                <outlet property="deleteButton" destination="VPC-h0-hzP" id="54A-Zz-TCh"/>
+                <outlet property="jumpButton" destination="oxZ-oj-xA2" id="jCf-3Q-Ip1"/>
+                <outlet property="saveButton" destination="AVk-a0-Rub" id="CKl-wR-LK0"/>
+                <outlet property="titleTextField" destination="9IA-WC-aE5" id="Lja-B4-ZHu"/>
+                <outlet property="tokenField" destination="1kQ-tc-IGf" id="uAr-qe-9gM"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="rrJ-Ws-OkT"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="300"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <value key="minSize" type="size" width="480" height="270"/>
+            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <tokenField focusRingType="none" translatesAutoresizingMaskIntoConstraints="NO" id="1kQ-tc-IGf">
+                        <rect key="frame" x="12" y="40" width="456" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="T5V-ua-QwE"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="456" id="jMD-H1-5aF"/>
+                        </constraints>
+                        <tokenFieldCell key="cell" selectable="YES" editable="YES" borderStyle="bezel" focusRingType="none" alignment="left" drawsBackground="YES" allowsEditingTextAttributes="YES" id="xxx-Yt-Dp5">
+                            <font key="font" metaFont="system" size="15"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </tokenFieldCell>
+                    </tokenField>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="SC6-26-wAq" userLabel="Button Container">
+                        <rect key="frame" x="113" y="12" width="255" height="22"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VPC-h0-hzP">
+                                <rect key="frame" x="0.0" y="-2" width="77" height="25"/>
+                                <buttonCell key="cell" type="roundTextured" title="删除(⌘ D)" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4QE-2x-jdP">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <string key="keyEquivalent">d</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="delete:" target="-2" id="ZWN-DV-Znj"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AVk-a0-Rub">
+                                <rect key="frame" x="89" y="-2" width="76" height="25"/>
+                                <buttonCell key="cell" type="roundTextured" title="保存(⌘ S)" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NiY-8f-rfR">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <string key="keyEquivalent">s</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="save:" target="-2" id="4sO-Az-dLH"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oxZ-oj-xA2">
+                                <rect key="frame" x="177" y="-2" width="78" height="25"/>
+                                <buttonCell key="cell" type="roundTextured" title="跳转(⌘ G)" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Mv6-zu-97f">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <string key="keyEquivalent">g</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="jump:" target="-2" id="e8G-N7-O4B"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="oxZ-oj-xA2" firstAttribute="centerY" secondItem="SC6-26-wAq" secondAttribute="centerY" id="0jv-J0-6wM"/>
+                            <constraint firstItem="VPC-h0-hzP" firstAttribute="centerY" secondItem="SC6-26-wAq" secondAttribute="centerY" id="7sY-P8-K51"/>
+                            <constraint firstItem="AVk-a0-Rub" firstAttribute="centerY" secondItem="SC6-26-wAq" secondAttribute="centerY" id="SvF-tx-b4b"/>
+                            <constraint firstAttribute="height" constant="22" id="T0W-kS-xcp"/>
+                            <constraint firstItem="VPC-h0-hzP" firstAttribute="leading" secondItem="SC6-26-wAq" secondAttribute="leading" id="WWf-Js-3Wp"/>
+                            <constraint firstAttribute="trailing" secondItem="oxZ-oj-xA2" secondAttribute="trailing" id="aMf-VF-nex"/>
+                            <constraint firstItem="oxZ-oj-xA2" firstAttribute="leading" secondItem="AVk-a0-Rub" secondAttribute="trailing" constant="12" id="ePh-ct-eMG"/>
+                            <constraint firstItem="AVk-a0-Rub" firstAttribute="leading" secondItem="VPC-h0-hzP" secondAttribute="trailing" constant="12" id="jmu-P4-bWr"/>
+                        </constraints>
+                    </customView>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9IA-WC-aE5">
+                        <rect key="frame" x="12" y="248" width="456" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="hk5-wo-Rz0">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="1kQ-tc-IGf" secondAttribute="bottom" constant="40" id="FTN-4x-xX6"/>
+                    <constraint firstAttribute="trailing" secondItem="1kQ-tc-IGf" secondAttribute="trailing" constant="12" id="HAM-yx-bm5"/>
+                    <constraint firstItem="9IA-WC-aE5" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="12" id="QGb-Ga-Ga1"/>
+                    <constraint firstAttribute="bottom" secondItem="SC6-26-wAq" secondAttribute="bottom" constant="12" id="SAF-8g-4gb"/>
+                    <constraint firstItem="1kQ-tc-IGf" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="12" id="XqB-W6-q1A"/>
+                    <constraint firstItem="SC6-26-wAq" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="jUF-ZK-3JV"/>
+                    <constraint firstItem="9IA-WC-aE5" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="30" id="jiP-on-VFS"/>
+                    <constraint firstAttribute="trailing" secondItem="9IA-WC-aE5" secondAttribute="trailing" constant="12" id="oAV-jl-Xmo"/>
+                    <constraint firstItem="1kQ-tc-IGf" firstAttribute="top" secondItem="9IA-WC-aE5" secondAttribute="bottom" constant="8" id="omF-ew-FeU"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="143" y="249"/>
+        </window>
+        <textField verticalHuggingPriority="750" id="oSw-OC-vsL">
+            <rect key="frame" x="0.0" y="0.0" width="96" height="14"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="nGt-xu-c6W">
+                <font key="font" metaFont="system"/>
+                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+            </textFieldCell>
+            <point key="canvasLocation" x="46" y="44"/>
+        </textField>
+        <button verticalHuggingPriority="750" id="EjI-Y4-3dA">
+            <rect key="frame" x="0.0" y="0.0" width="78" height="25"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <buttonCell key="cell" type="roundTextured" title="跳转(⌘ G)" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w6n-5o-XFn">
+                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                <font key="font" size="13" name=".PingFangSC-Regular"/>
+                <string key="keyEquivalent">g</string>
+                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+            </buttonCell>
+            <connections>
+                <action selector="jump:" target="-2" id="wpW-Hg-jiw"/>
+            </connections>
+        </button>
+    </objects>
+</document>
