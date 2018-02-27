@@ -1,4 +1,9 @@
+<p align='center'>
+<img src='https://raw.githubusercontent.com/daryl5/iScheme/master/images/logo.png' width=100 />
+</p>
+
 # iScheme
+<video src='https://raw.githubusercontent.com/daryl5/iScheme/master/images/showcase.mp4' width=420></video>
 [中文介绍](https://github.com/daryl5/iScheme#中文介绍)  
 iScheme is a Mac menu bar app for iOS/Android/FE developers to open specific [URL scheme](https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html) in iOS/Android simulator/real device with **JUST 1 CLICK**.  
 If you are working on several pages in a giant app, and you always click through pages to navigate to your page for debugging, iScheme will save a lot of time for you.
