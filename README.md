@@ -3,7 +3,8 @@
 </p>
 
 # iScheme
-<video src='https://raw.githubusercontent.com/daryl5/iScheme/master/images/showcase.mp4' width=420></video>
+[GIF showcase(6MB)](https://github.com/daryl5/iScheme/blob/master/images/showcase.gif?raw=true)
+
 [中文介绍](https://github.com/daryl5/iScheme#中文介绍)  
 iScheme is a Mac menu bar app for iOS/Android/FE developers to open specific [URL scheme](https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html) in iOS/Android simulator/real device with **JUST 1 CLICK**.  
 If you are working on several pages in a giant app, and you always click through pages to navigate to your page for debugging, iScheme will save a lot of time for you.
@@ -35,6 +36,9 @@ Building the app requires Carthage to be installed. Then run `carthage update` t
 iScheme is released under the MIT license. See LICENSE for details.
 
 # 中文介绍
+
+[GIF 演示(6MB)](https://github.com/daryl5/iScheme/blob/master/images/showcase.gif?raw=true)
+
 iScheme 是一个给 iOS/Android/移动前端开发者使用的 Mac 菜单栏 App，用于一键跳转一个 [URL scheme](https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html)，支持 iOS 模拟器和真机、Android 模拟器和真机。  
 如果你在一个业务繁多的 App 中负责几个页面，并且经常需要在 App 中点点点去到你负责的页面来进行调试，那 iScheme 会帮你节省掉这些点点点的时间。
 
@@ -54,3 +58,9 @@ iScheme 是一个给 iOS/Android/移动前端开发者使用的 Mac 菜单栏 Ap
 - ``⌘+⇧+` `` 会显示「快速跳转」/「搜索」窗口，可以粘贴 scheme 按下回车直接跳转或进行搜索。
 - 在任何界面按着 `⌘` 点击 scheme 会生成其二维码。
 - 你可以在 `Documents/Schemes.json` 找到你添加的所有 scheme，直接分享这个文件即可将所有 scheme 分享给他人。
+
+## 运行
+在终端运行 `carthage update` 安装项目依赖，然后打开工程文件运行即可。
+
+## 作者
+微博：[@程序员小方](https://weibo.com/wuyunpeng)
