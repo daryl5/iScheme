@@ -2,12 +2,15 @@
 <img src='https://raw.githubusercontent.com/daryl5/iScheme/master/images/logo.png' width=100 />
 </p>
 
-# iScheme
-[GIF showcase(6MB)](https://github.com/daryl5/iScheme/blob/master/images/showcase.gif?raw=true)
+[v1.0 download](https://github.com/daryl5/iScheme/archive/v1.0.zip)
 
+# iScheme
 [中文介绍](https://github.com/daryl5/iScheme#中文介绍)  
+
 iScheme is a Mac menu bar app for iOS/Android/FE developers to open specific [URL scheme](https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html) in iOS/Android simulator/real device with **JUST 1 CLICK**.  
-If you are working on several pages in a giant app, and you always click through pages to navigate to your page for debugging, iScheme will save a lot of time for you.
+If you are working on several pages in a giant app, and you always click through pages to navigate to your page for debugging, iScheme will save a lot of time for you.  
+
+[GIF showcase(6MB)](https://github.com/daryl5/iScheme/blob/master/images/showcase.gif)  
 
 ## Feature
 - Open URL scheme in:
@@ -35,12 +38,13 @@ Building the app requires Carthage to be installed. Then run `carthage update` t
 ## License
 iScheme is released under the MIT license. See LICENSE for details.
 
+---
+
 # 中文介绍
-
-[GIF 演示(6MB)](https://github.com/daryl5/iScheme/blob/master/images/showcase.gif?raw=true)
-
 iScheme 是一个给 iOS/Android/移动前端开发者使用的 Mac 菜单栏 App，用于一键跳转一个 [URL scheme](https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html)，支持 iOS 模拟器和真机、Android 模拟器和真机。  
 如果你在一个业务繁多的 App 中负责几个页面，并且经常需要在 App 中点点点去到你负责的页面来进行调试，那 iScheme 会帮你节省掉这些点点点的时间。
+
+[GIF 演示(6MB)](https://github.com/daryl5/iScheme/blob/master/images/showcase.gif)
 
 ## 功能
 - 跳转 URL scheme，支持:
