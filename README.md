@@ -2,7 +2,7 @@
 <img src='https://raw.githubusercontent.com/daryl5/iScheme/master/images/logo.png' width=100 />
 </p>
 
-[v1.0 download](https://github.com/daryl5/iScheme/archive/v1.0.zip)
+[v1.0 download](https://github.com/daryl5/iScheme/releases/download/v1.0/iScheme.zip)
 
 # iScheme
 [中文介绍](https://github.com/daryl5/iScheme#中文介绍)  
