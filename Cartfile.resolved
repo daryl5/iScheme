@@ -1,5 +1,5 @@
 github "Clipy/KeyHolder" "v2.1.0"
 github "Clipy/Magnet" "v2.1.0"
-github "robbiehanson/CocoaAsyncSocket" "c20bd9b7cc34ccf09fbe8299f9bf976158394b86"
+github "robbiehanson/CocoaAsyncSocket" "ec6c373de9eb7606a229ab927d1cce432073cc26"
 github "shpakovski/MASPreferences" "1.3"
 github "sparkle-project/Sparkle" "1.18.1"

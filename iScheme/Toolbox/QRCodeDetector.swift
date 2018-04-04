@@ -247,7 +247,7 @@ class QRCodeDetector {
         /* Allocate enough memory to hold all the display IDs we have. */
         let displays = UnsafeMutablePointer<CGDirectDisplayID>.allocate(capacity: Int(dspCount))
         defer {
-            displays.deallocate(capacity: Int(dspCount))
+            displays.deallocate()
         }
         
         // Get the list of active displays
