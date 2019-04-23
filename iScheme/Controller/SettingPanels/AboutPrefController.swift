@@ -66,7 +66,7 @@ extension AboutPrefController: MASPreferencesViewController {
         return "about"
     }
     
-    public var toolbarItemImage: NSImage? { return NSImage.init(imageLiteralResourceName: NSImage.Name.info.rawValue) }
+    public var toolbarItemImage: NSImage? { return NSImage.init(imageLiteralResourceName: NSImage.infoName) }
     
     public var toolbarItemLabel: String? { return Localisation("ABOUT") }
 }

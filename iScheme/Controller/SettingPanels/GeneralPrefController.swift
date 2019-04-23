@@ -49,7 +49,7 @@ final class GeneralPrefController: NSViewController {
     }
     
     private func focus(on textField: NSTextField, placeholder: String) {
-        let textColor = [NSAttributedStringKey.foregroundColor: NSColor.red]
+        let textColor = [NSAttributedString.Key.foregroundColor: NSColor.red]
         textField.placeholderAttributedString = NSAttributedString(string:placeholder, attributes:textColor)
         textField.becomeFirstResponder()
     }
@@ -84,7 +84,7 @@ final class GeneralPrefController: NSViewController {
 }
 
 extension GeneralPrefController: NSTextFieldDelegate {
-    override func controlTextDidChange(_ notification: Notification) {
+    func controlTextDidChange(_ notification: Notification) {
         guard let textField = notification.object as? NSTextField else {
             return
         }
@@ -102,7 +102,7 @@ extension GeneralPrefController: MASPreferencesViewController {
         return "general"
     }
     
-    public var toolbarItemImage: NSImage? { return NSImage.init(imageLiteralResourceName: NSImage.Name.preferencesGeneral.rawValue) }
+    public var toolbarItemImage: NSImage? { return NSImage.init(imageLiteralResourceName: NSImage.preferencesGeneralName) }
     
     public var toolbarItemLabel: String? { return Localisation("GENERAL") }
 }

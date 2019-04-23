@@ -77,7 +77,7 @@ extension AdvancedPrefController: MASPreferencesViewController {
         return "advanced"
     }
     
-    public var toolbarItemImage: NSImage? { return NSImage.init(imageLiteralResourceName: NSImage.Name.advanced.rawValue) }
+    public var toolbarItemImage: NSImage? { return NSImage.init(imageLiteralResourceName: NSImage.advancedName) }
     
     public var toolbarItemLabel: String? { return Localisation("ADVANCED") }
 }

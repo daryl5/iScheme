@@ -12,7 +12,7 @@ typealias QRCodeWindowOnClose = () throws -> ()
 
 final class QRCodeViewer: NSWindowController {
     
-    static let qrCodeView = QRCodeViewer(windowNibName: NSNib.Name(rawValue: "QRCodeViewer"))
+    static let qrCodeView = QRCodeViewer(windowNibName: "QRCodeViewer")
 
     private var onCloseAction: QRCodeWindowOnClose?
     
@@ -28,7 +28,7 @@ final class QRCodeViewer: NSWindowController {
     override func windowDidLoad() {
         super.windowDidLoad()
         qrImageView.wantsLayer = true
-        qrImageView.layer?.magnificationFilter = kCAFilterNearest
+        qrImageView.layer?.magnificationFilter = CALayerContentsFilter.nearest
         let imageCell = qrImageView.cell as! NSImageCell
         imageCell.imageFrameStyle = NSImageView.FrameStyle.none
         

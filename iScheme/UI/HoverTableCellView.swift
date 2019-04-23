@@ -60,7 +60,7 @@ final class HoverTableCellView: NSTableCellView {
             animation.beginTime = CACurrentMediaTime() + 0.8
             animation.duration = CFTimeInterval.init(distance / 80)
             animation.isRemovedOnCompletion = false
-            animation.fillMode = kCAFillModeForwards
+            animation.fillMode = CAMediaTimingFillMode.forwards
             textField.layer?.add(animation, forKey: "position.x")
         }
     }
@@ -69,7 +69,7 @@ final class HoverTableCellView: NSTableCellView {
 extension String {
     func width(font: NSFont) -> CGFloat {
         let size = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
-        let boundingBox = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font])
+        let boundingBox = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font])
         return boundingBox.width
     }
 }

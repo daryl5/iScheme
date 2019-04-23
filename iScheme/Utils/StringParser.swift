@@ -55,7 +55,7 @@ func character(condition: @escaping (Character) -> Bool) -> Parser<Character> {
 
 func first(_ character: Character) -> Parser<Character> {
     return Parser { input in
-        guard let firstIndex = input.index(of: character) else {
+        guard let firstIndex = input.firstIndex(of: character) else {
             return nil
         }
         

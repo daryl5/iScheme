@@ -18,10 +18,10 @@ final class SettingPanel {
     private var generalPanel: GeneralPrefController?
     
     func show() {
-        let advanced = AdvancedPrefController.init(nibName: NSNib.Name(rawValue: "AdvancedPrefController"), bundle: nil)
-        let tips = TipsPrefController.init(nibName: NSNib.Name(rawValue: "TipsPrefController"), bundle: nil)
-        let about = AboutPrefController.init(nibName: NSNib.Name(rawValue: "AboutPrefController"), bundle: nil)
-        let general = GeneralPrefController.init(nibName: NSNib.Name(rawValue: "GeneralPrefController"), bundle: nil)
+        let advanced = AdvancedPrefController.init(nibName: "AdvancedPrefController", bundle: nil)
+        let tips = TipsPrefController.init(nibName: "TipsPrefController", bundle: nil)
+        let about = AboutPrefController.init(nibName: "AboutPrefController", bundle: nil)
+        let general = GeneralPrefController.init(nibName: "GeneralPrefController", bundle: nil)
         generalPanel = general
         
         settingsPanel = MASPreferencesWindowController.init(viewControllers: [general, advanced, NSNull.init(), tips, about], title: Localisation("PREFERENCES"))

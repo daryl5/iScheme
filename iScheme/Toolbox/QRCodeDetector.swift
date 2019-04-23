@@ -54,7 +54,7 @@ final class HighlightWindow: NSWindow, CAAnimationDelegate {
                 let rect = mixRect(self.bounds, r, progress)
                 let clipPath = NSBezierPath(rect: self.bounds)
                 clipPath.appendRect(rect)
-                clipPath.windingRule = .evenOddWindingRule
+                clipPath.windingRule = .evenOdd
                 clipPath.addClip()
             }
             NSColor(white: 0, alpha: 0.4 * CGFloat(progress)).set()
@@ -93,9 +93,9 @@ final class HighlightWindow: NSWindow, CAAnimationDelegate {
         fadeOut.duration = 0.12
         fadeOut.fromValue = 1
         fadeOut.toValue = 0
-        fadeOut.fillMode = kCAFillModeBackwards
+        fadeOut.fillMode = CAMediaTimingFillMode.backwards
         fadeOut.isRemovedOnCompletion = false
-        fadeOut.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        fadeOut.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         fadeOut.delegate = self
         self.contentView?.layer?.add(fadeOut, forKey: nil)
     }
@@ -117,7 +117,7 @@ final class HighlightWindow: NSWindow, CAAnimationDelegate {
         highlightAnimation.duration = 0.2
         highlightAnimation.fromValue = 0.0
         highlightAnimation.toValue = 1.0
-        highlightAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        highlightAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         highlightLayer.add(highlightAnimation, forKey: "")
         
         self.qrs = qrs
@@ -132,7 +132,7 @@ final class HighlightWindow: NSWindow, CAAnimationDelegate {
                 button.layer?.anchorPoint = NSMakePoint(0.5, 0.5)
                 let style = NSMutableParagraphStyle()
                 style.alignment = .center
-                button.attributedTitle = NSAttributedString(string: buttons[i].0, attributes: [NSAttributedStringKey.foregroundColor:NSColor.white, NSAttributedStringKey.font:NSFont.systemFont(ofSize: buttonSize * 0.3), NSAttributedStringKey.paragraphStyle:style])
+                button.attributedTitle = NSAttributedString(string: buttons[i].0, attributes: [NSAttributedString.Key.foregroundColor:NSColor.white, NSAttributedString.Key.font:NSFont.systemFont(ofSize: buttonSize * 0.3), NSAttributedString.Key.paragraphStyle:style])
                 button.setButtonType(.momentaryChange)
                 button.wantsLayer = true
                 button.layer?.backgroundColor = NSColor(white: 0, alpha: 0.8).cgColor
@@ -151,8 +151,8 @@ final class HighlightWindow: NSWindow, CAAnimationDelegate {
                 fadeIn.fromValue = 0
                 fadeIn.toValue = 1
                 fadeIn.isRemovedOnCompletion = false
-                fadeIn.fillMode = kCAFillModeForwards
-                fadeIn.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+                fadeIn.fillMode = CAMediaTimingFillMode.forwards
+                fadeIn.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
                 button.layer?.add(fadeIn, forKey: "")
                 
                 let move = CABasicAnimation(keyPath: "position.y")
@@ -161,8 +161,8 @@ final class HighlightWindow: NSWindow, CAAnimationDelegate {
                 move.fromValue = button.frame.origin.y - buttonSize * 0.6
                 move.toValue = button.frame.origin.y
                 move.isRemovedOnCompletion = false
-                move.fillMode = kCAFillModeForwards
-                move.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+                move.fillMode = CAMediaTimingFillMode.forwards
+                move.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
                 button.layer?.add(move, forKey: "")
             }
         }

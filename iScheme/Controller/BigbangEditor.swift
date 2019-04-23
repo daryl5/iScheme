@@ -12,7 +12,7 @@ import Crashlytics
 
 final class BigbangEditor: NoTitleWindowController {
     
-    static let sharedEditor = BigbangEditor(windowNibName: NSNib.Name(rawValue: "BigbangEditor"))
+    static let sharedEditor = BigbangEditor(windowNibName: "BigbangEditor")
     
     @IBOutlet weak var titleTextField: NSTextField!
     @IBOutlet weak var tokenField: NSTokenField!

@@ -30,7 +30,7 @@ extension TipsPrefController: MASPreferencesViewController {
         return "tips"
     }
     
-    public var toolbarItemImage: NSImage? { return NSImage(named: NSImage.Name(rawValue: "bulb")) }
+    public var toolbarItemImage: NSImage? { return NSImage(named: "bulb") }
     
     public var toolbarItemLabel: String? { return Localisation("TIPS") }
 }

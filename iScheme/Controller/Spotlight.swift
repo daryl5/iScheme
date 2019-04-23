@@ -16,7 +16,7 @@ private let kDefaultTextTableSpace: CGFloat = 12
 
 final class Spotlight: NSWindowController {
     
-    static let sharedInstance: Spotlight = Spotlight(windowNibName: NSNib.Name(rawValue: "Spotlight"))
+    static let sharedInstance: Spotlight = Spotlight(windowNibName: "Spotlight")
 
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var textTableSpace: NSLayoutConstraint!
@@ -283,7 +283,7 @@ extension Spotlight: NSTextFieldDelegate {
         return false
     }
     
-    public override func controlTextDidChange(_ obj: Notification) {
+    public func controlTextDidChange(_ obj: Notification) {
         let input = (obj.object as! NSTextField).stringValue
         updateButtonHidden(by: input)
         search(by: input)

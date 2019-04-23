@@ -21,7 +21,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     //UI
     private let statusItem: NSStatusItem = {
         let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-        item.image = NSImage(named: NSImage.Name(rawValue: "StatusBarButtonImage"))
+        item.image = NSImage(named: "StatusBarButtonImage")
         return item
     }()
     
@@ -130,8 +130,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         
         let bonjourItem = NSMenuItem(title: (bonjour.state == .on) ? Localisation("STOP_BONJOUR_SERVER") : Localisation("BONJOUR_SERVER"), action: .toggleBonjour, keyEquivalent: "")
         bonjourItem.state = bonjour.state == .on ? NSControl.StateValue.on : NSControl.StateValue.off
-        bonjourItem.onStateImage = NSImage.init(named: NSImage.Name.statusAvailable)
-        bonjourItem.offStateImage = NSImage.init(named: NSImage.Name.statusUnavailable)
+        bonjourItem.onStateImage = NSImage.init(named: NSImage.statusAvailableName)
+        bonjourItem.offStateImage = NSImage.init(named: NSImage.statusUnavailableName)
         menu.addItem(bonjourItem)
         
         deviceItem.submenu = menu

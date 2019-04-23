@@ -110,7 +110,7 @@ extension DataManager {
     
     func removeScheme(_ item: SchemeItem) {
         if item.parentItem == nil {
-            if let index = schemeItems.index(of: item) {
+            if let index = schemeItems.firstIndex(of: item) {
                 schemeItems.remove(at: index)
                 saveSchemes()
             }
@@ -118,7 +118,7 @@ extension DataManager {
         }
         
         let parent = item.parentItem!
-        parent.subItems!.remove(at: (parent.subItems!.index(of: item))!)
+        parent.subItems!.remove(at: (parent.subItems!.firstIndex(of: item))!)
         if parent.subItems!.count == 0 {
             parent.subItems = nil
         }
@@ -138,13 +138,13 @@ extension DataManager {
         
         //同层级拖移：最外层拖移；一个item的子item内拖移
         if outer2outer {
-            let fromIndex = schemeItems.index(of: item)
+            let fromIndex = schemeItems.firstIndex(of: item)
             if fromIndex == nil || fromIndex == index || fromIndex == index - 1 {
                 return false
             }
             schemeItems.moveItem(fromIndex!, toIndex: index)
         } else if sub2sameSub {
-            let fromIndex = item.parentItem!.subItems!.index(of: item)
+            let fromIndex = item.parentItem!.subItems!.firstIndex(of: item)
             if fromIndex == nil || fromIndex == index || fromIndex == index - 1 {
                 return false
             }
@@ -172,7 +172,7 @@ extension DataManager {
             var fromIndex: Int?
             //原本是里层的，有parent
             if let fromParent = item.parentItem {
-                fromIndex = fromParent.subItems!.index(of: item)
+                fromIndex = fromParent.subItems!.firstIndex(of: item)
                 if fromIndex == nil {
                     return false
                 }
@@ -183,7 +183,7 @@ extension DataManager {
             }
             //原本就是最外层的
             else {
-                fromIndex = schemeItems.index(of: item)
+                fromIndex = schemeItems.firstIndex(of: item)
                 if fromIndex == nil {
                     return false
                 }

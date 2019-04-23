@@ -11,7 +11,7 @@ import Crashlytics
 
 final class ListEditor: NoTitleWindowController {
     
-    static let sharedInstance = ListEditor(windowNibName: NSNib.Name(rawValue: "ListEditor"))
+    static let sharedInstance = ListEditor(windowNibName: "ListEditor")
 
     @IBOutlet private weak var outlineView: NSOutlineView!
     

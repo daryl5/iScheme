@@ -332,13 +332,13 @@
 				TargetAttributes = {
 					1F02A2381C86A30800D371D0 = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
 			buildConfigurationList = 1F02A2341C86A30700D371D0 /* Build configuration list for PBXProject "iScheme" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -582,7 +582,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lingwan.iScheme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -601,7 +601,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lingwan.iScheme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
