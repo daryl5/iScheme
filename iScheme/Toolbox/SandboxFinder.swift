@@ -67,8 +67,8 @@ struct SandboxFinder {
 
         ShellHelper.exec(launchPath: "/usr/bin/xcrun", arguments: ["simctl", "list"], callback: { output, _ in
             do {
-                let regex = try NSRegularExpression.init(pattern: "\\((.*?)\\) *\\(Booted\\)", options: NSRegularExpression.Options())
-                let matchResult = regex.firstMatch(in: output, options: NSRegularExpression.MatchingOptions(), range: NSMakeRange(0, output.utf8.count))
+                let regex = try NSRegularExpression.init(pattern: "\\(([0-9A-Z-]+)\\) *\\(Booted\\)", options: NSRegularExpression.Options())
+                let matchResult = regex.firstMatch(in: output, options: NSRegularExpression.MatchingOptions(), range: NSMakeRange(0, output.count))
                 if let range = matchResult?.range(at: 1), let stringRange = Range.init(range, in: output) {
                     result = String(output[stringRange])
                 }
