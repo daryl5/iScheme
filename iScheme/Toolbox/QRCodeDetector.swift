@@ -83,6 +83,7 @@ final class HighlightWindow: NSWindow, CAAnimationDelegate {
     
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if (flag) {
+            self.contentView?.layer?.removeAnimation(forKey: "kFadeOutAnimation")
             super.close()
         }
     }
@@ -97,7 +98,7 @@ final class HighlightWindow: NSWindow, CAAnimationDelegate {
         fadeOut.isRemovedOnCompletion = false
         fadeOut.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         fadeOut.delegate = self
-        self.contentView?.layer?.add(fadeOut, forKey: nil)
+        self.contentView?.layer?.add(fadeOut, forKey: "kFadeOutAnimation")
     }
     
     func setQrCodes(_ qrs: [QrCodeInfo], singleMode: Bool) {
@@ -198,8 +199,6 @@ final class HighlightWindow: NSWindow, CAAnimationDelegate {
 
 @available(OSX 10.10, *)
 class QRCodeDetector {
-    private var highlightWindow = HighlightWindow(contentRect: NSZeroRect, styleMask: NSWindow.StyleMask(rawValue: UInt(0)), backing: .buffered, defer: false)
-    private var highlightWindows = [HighlightWindow]()
     
     @available(OSX 10.10, *)
     func decodeQr() {
@@ -215,10 +214,14 @@ class QRCodeDetector {
             alert.runModal()
             alert.window.becomeKey()
         } else {
-            highlightWindows.removeAll()
             for i in 0..<qrInScreens.count {
                 let screen = NSScreen.screens[i]
                 var qrs = qrInScreens[i]
+                
+                guard qrs.count > 0 else {
+                    continue
+                }
+                
                 qrs = qrs.map {
                     var qr = $0
                     qr.bounds.origin.x /= screen.backingScaleFactor
@@ -231,7 +234,6 @@ class QRCodeDetector {
                 let window = HighlightWindow(contentRect: screen.frame, styleMask: NSWindow.StyleMask(rawValue: UInt(0)), backing: .buffered, defer: false)
                 window.setQrCodes(qrs, singleMode: count == 1)
                 window.setIsVisible(true)
-                highlightWindows.append(window)
             }
         }
     }
