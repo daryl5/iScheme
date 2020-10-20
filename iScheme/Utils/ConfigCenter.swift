@@ -96,7 +96,7 @@ final class ConfigCenter {
     private var _goFirstHotKeyData = DiskSetting<Data>.init(.kGoFirstHotKey, _defaultGoFirst ?? Data())
 
     private static var _defaultGoFirst: Data? {
-        guard let goFirst = KeyCombo(keyCode: kVK_ANSI_E, cocoaModifiers: [.command, .shift]) else { return nil }
+        guard let goFirst = KeyCombo(QWERTYKeyCode: kVK_ANSI_E, cocoaModifiers: [.command, .shift]) else { return nil }
         return NSKeyedArchiver.archivedData(withRootObject: goFirst)
     }
     
@@ -117,7 +117,7 @@ final class ConfigCenter {
     private var _quickJumpHotKeyData = DiskSetting<Data>.init(.kQuickJumpHotKey, _defaultQuickJump ?? Data())
     
     private static var _defaultQuickJump: Data? {
-        guard let quickJump = KeyCombo(keyCode: kVK_ANSI_Grave, cocoaModifiers: [.command, .shift]) else { return nil }
+        guard let quickJump = KeyCombo(QWERTYKeyCode: kVK_ANSI_Grave, cocoaModifiers: [.command, .shift]) else { return nil }
         return NSKeyedArchiver.archivedData(withRootObject: quickJump)
     }
     

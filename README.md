@@ -25,7 +25,7 @@ If you are working on several pages in a giant app, and you always click through
 ## Tips
 - iScheme works in QR code mode by default, remember to change working mode to iOS/Android in Preferences.
 - `⌘+⇧+E` open the **FIRST** URL scheme. **Always use this hotkey**. You can customize hotkey in Preferences.
-- `⌘+⇧+\`` show a 「Quick Jump」/「Search」 window. You can paste and press Enter to jump, or type a keyword to search.
+- `⌘+⇧+\`` show a 「Quick Open」/「Search」 window. You can paste and press Enter to open, or type a keyword to search.
 - Click a scheme while holding `⌘` will show QR code of this scheme. This works in main menu and search result.
 - You can find all schemes in `Documents/Schemes.json` if you want to share with others.
 

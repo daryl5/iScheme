@@ -59,6 +59,8 @@
 		1FE143EA1E07CFB30052CBF5 /* KeyHolder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE143E81E07CFB30052CBF5 /* KeyHolder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FE143EB1E07CFB30052CBF5 /* Magnet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE143E91E07CFB30052CBF5 /* Magnet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FE1445E1E0A3FD40052CBF5 /* ShellHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1445D1E0A3FD40052CBF5 /* ShellHelper.swift */; };
+		2938C7E02535E24700FAA3B8 /* Sauce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2938C7DF2535E24700FAA3B8 /* Sauce.framework */; };
+		2938C7E12535E24700FAA3B8 /* Sauce.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2938C7DF2535E24700FAA3B8 /* Sauce.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +70,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2938C7E12535E24700FAA3B8 /* Sauce.framework in Embed Frameworks */,
 				1FE143E41E07CA090052CBF5 /* MASPreferences.framework in Embed Frameworks */,
 				1FE143E71E07CA110052CBF5 /* Sparkle.framework in Embed Frameworks */,
 				1F4336381EFE329500FFDBA2 /* CocoaAsyncSocket.framework in Embed Frameworks */,
@@ -134,6 +137,7 @@
 		1FE143E81E07CFB30052CBF5 /* KeyHolder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeyHolder.framework; path = Carthage/Build/Mac/KeyHolder.framework; sourceTree = "<group>"; };
 		1FE143E91E07CFB30052CBF5 /* Magnet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Magnet.framework; path = Carthage/Build/Mac/Magnet.framework; sourceTree = "<group>"; };
 		1FE1445D1E0A3FD40052CBF5 /* ShellHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShellHelper.swift; sourceTree = "<group>"; };
+		2938C7DF2535E24700FAA3B8 /* Sauce.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sauce.framework; path = Carthage/Build/Mac/Sauce.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F4336371EFE329500FFDBA2 /* CocoaAsyncSocket.framework in Frameworks */,
+				2938C7E02535E24700FAA3B8 /* Sauce.framework in Frameworks */,
 				1FB8415C1C9A9FF2006C6BCF /* Carbon.framework in Frameworks */,
 				1F5EE8341E16614F001CDB2C /* Crashlytics.framework in Frameworks */,
 				1FE143E61E07CA110052CBF5 /* Sparkle.framework in Frameworks */,
@@ -286,6 +291,7 @@
 		1FE143D61E07C91C0052CBF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2938C7DF2535E24700FAA3B8 /* Sauce.framework */,
 				1F4336361EFE329500FFDBA2 /* CocoaAsyncSocket.framework */,
 				1F5EE8311E16614F001CDB2C /* Fabric.framework */,
 				1F5EE8321E16614F001CDB2C /* Crashlytics.framework */,
@@ -327,7 +333,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = lingwan;
 				TargetAttributes = {
 					1F02A2381C86A30800D371D0 = {
@@ -487,6 +493,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -542,6 +549,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -571,6 +579,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -590,6 +599,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

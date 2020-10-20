@@ -52,6 +52,10 @@ final class AdvancedPrefController: NSViewController {
 }
 
 extension AdvancedPrefController: RecordViewDelegate {
+    func recordView(_ recordView: RecordView, didChangeKeyCombo keyCombo: KeyCombo?) {
+        HotKeyManager.shared.save(keyCombo: keyCombo, for: recordView.identifier!.rawValue)
+    }
+    
     func recordViewShouldBeginRecording(_ recordView: RecordView) -> Bool {
         return true
     }
@@ -60,16 +64,24 @@ extension AdvancedPrefController: RecordViewDelegate {
         return true
     }
     
-    func recordViewDidClearShortcut(_ recordView: RecordView) {
-        HotKeyManager.shared.save(keyCombo: nil, for: recordView.identifier!.rawValue)
-    }
+//    func recordViewDidClearShortcut(_ recordView: RecordView) {
+//        HotKeyManager.shared.save(keyCombo: nil, for: recordView.identifier!.rawValue)
+//    }
     
     func recordViewDidEndRecording(_ recordView: RecordView) {
     }
     
     func recordView(_ recordView: RecordView, didChangeKeyCombo keyCombo: KeyCombo) {
-        HotKeyManager.shared.save(keyCombo: keyCombo, for: recordView.identifier!.rawValue)
     }
+    
+    
+//    func recordViewShouldBeginRecording(_ recordView: KeyHolder.RecordView) -> Bool
+//
+//    func recordView(_ recordView: KeyHolder.RecordView, canRecordKeyCombo keyCombo: Magnet.KeyCombo) -> Bool
+//
+//    func recordView(_ recordView: KeyHolder.RecordView, didChangeKeyCombo keyCombo: Magnet.KeyCombo?)
+//
+//    func recordViewDidEndRecording(_ recordView: KeyHolder.RecordView)
 }
 
 extension AdvancedPrefController: MASPreferencesViewController {
